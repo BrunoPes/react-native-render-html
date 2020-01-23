@@ -139,7 +139,7 @@ export function iframe (htmlAttribs, children, convertedCSSStyles, passProps) {
     const source = htmlAttribs.srcdoc ? { html: htmlAttribs.srcdoc } : { uri: htmlAttribs.src };
 
     return (
-        <WebView key={passProps.key} source={source} style={style} />
+        <WebView useWebKit={true} key={passProps.key} source={source} style={style} />
     );
 }
 
